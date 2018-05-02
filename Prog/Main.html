@@ -1,378 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <style media="screen">
-      .backImg {
-        background-size: 1600px ;
-        background-repeat: no-repeat;
+    <script src="jquery-3.3.1.min.js"></script>
+    <style>
 
-      }
-
+              .SidebarButtons {
+            border-radius: 4px;
+            padding: 10px 10px;
+            position: fixed;
+            width: 175px;
+            height: 30px;
+            right: 352px;
+            background-color: White;
+            color: black;
+            text-align: center;
+            display: block;
+            font-size: 24px;
+          }
     </style>
     <meta charset="utf-8">
     <title>Animals of the Mariana trench (heh)</title>
   </head>
-  <body class="backImg" background="Deep sea Creatures.png">
+    <body bgcolor="grey">
+      <div id="Sidebar" style="position: fixed; ">
+        <a onclick="scrollOne()" class="SidebarButtons" style="bottom: 860px;">Megamouth</a> <!-- 30 Height + 30 space (px) -->
+        <a onclick="scrollTwo()" class="SidebarButtons" style="bottom: 800px;">Giant Spider Crab</a>
+        <a onclick="scrollThree()"  class="SidebarButtons"style="bottom: 740px;">Ahmed Gabr</a>
+        <a onclick="scrollFour()" class="SidebarButtons" style="bottom: 680px;">Atlantic Wolffish</a>
+        <a onclick="scrollFive()" class="SidebarButtons" style="bottom: 620px;">Basket Star</a>
+      </div>
 
-  </body>
-  <body bgcolor="grey">
-    <h1 style="font-size:300%;">Animals of the Mariana trench (heh)</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
+                  <!-- Interactive map -->
+          <img src="Deep sea Creatures.png" usemap="#image-map">
 
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+          <map name="image-map">
+              <area id="1" target="" alt="Megamouth Shark" title="Megamouth Shark" href="Megamouth.html" coords="677,460,935,484" shape="rect"/>
+              <area id="2" target="" alt="Giant Spider Crab" title="Giant Spider Crab" href="GiantCrab.html" coords="336,710,584,734" shape="rect"/>
+              <area id="3" target="" alt="Ahmed Gabr" title="Ahmed Gabr" href="AhmedGabr.html" coords="561,939,746,966" shape="rect"/>
+              <area id="4" target="" alt="Atlantic Wolffish" title="Atlantic Wolffish" href="Wolffish.html" coords="406,1075,640,1100" shape="rect"/>
+              <area id="5" target="" alt="Basket Star" title="Basket Star" href="Basket.html" coords="577,1216,739,1240" shape="rect"/>
+              <area id="6" target="" alt="Ocean Sunfish" title="Ocean Sunfish" href="Sunfish.html" coords="372,1397,571,1421" shape="rect"/>
+              <area id="7" target="" alt="Atmospheric Diving Unit (ADS)" title="Atmospheric Diving Unit (ADS)" href="ADS.html" coords="626,1626,1057,1655" shape="rect"/>
+              <area id="8" target="" alt="Pacific Hagfish" title="Pacific Hagfish" href="Hagfish" coords="40,1787,247,1813" shape="rect"/>
+              <area id="9" target="" alt="Pigbutt Worm" title="Pigbutt Worm" href="Pigbutt.html" coords="806,1787,1005,1815" shape="rect"/>
+              <area id="10" target="" alt="Predatory Tunicate" title="Predatory Tunicate" href="Tunicate.html" coords="147,2066,409,2094" shape="rect"/>
+              <area id="11" target="" alt="Pacific Blackdragon" title="Pacific Blackdragon" href="Blackdragon.html" coords="212,2475,497,2512" shape="rect"/>
+              <area id="12" target="" alt="Giant Oarfish" title="Giant Oarfish" href="GiantOarfish.html" coords="577,2472,767,2497" shape="rect"/>
+              <area id="13" target="" alt="Giant Siphonophore" title="Giant Siphonophore" href="Siphonophore.html" coords="130,3114,416,3138" shape="rect"/>
+              <area id="14" target="" alt="Blobfish" title="Blobfish" href="Blobfish.html" coords="227,3272,344,3296" shape="rect"/>
+              <area id="15" target="" alt="Frilled Shark" title="Frilled Shark" href="FrilledShark.html" coords="671,3268,849,3292" shape="rect"/>
+              <area id="16" target="" alt="Gulper Eel" title="Gulper Eel" href="Gulpher.html" coords="786,3583,639,3557" shape="rect"/>
+              <area id="17" target="" alt="Flying Spaghetti Monster" title="Flying Spaghetti Monster" href="FSM.hmtl" coords="17,3642,368,3669" shape="rect"/>
+              <area id="18" target="" alt="Goblin Shark" title="Goblin Shark" href="GoblinShark.html" coords="679,3817,864,3839" shape="rect"/>
+              <area id="19" target="" alt="Humpback Anglerfish" title="Humpback Anglerfish" href="HumpbackAngler.html" coords="337,4016,32,3988" shape="rect"/>
+              <area id="20" target="" alt="Giant Tube Worm" title="Giant Tube Worm" href="TubeWorm.html" coords="663,4152,908,4176" shape="rect"/>
+              <area id="21" target="" alt="Fangtooth" title="Fangtooth" href="Fangtooth.html" coords="217,4312,366,4341" shape="rect"/>
+              <area id="22" target="" alt="Triplewart Seadevil" title="Triplewart Seadevil" href="Seadevil.html" coords="613,4463,887,4496" shape="rect"/>
+              <area id="23" target="" alt="Giant isopod" title="Giant isopod" href="Isopod.html" coords="394,4688,580,4719" shape="rect"/>
+              <area id="24" target="" alt="Yeti Crab" title="Yeti Crab" href="Yeti.html" coords="216,4997,342,5026" shape="rect"/>
+              <area id="25" target="" alt="Colossal Squid" title="Colossal Squid" href="ColossalSquid.html" coords="864,4791,1068,4820" shape="rect"/>
+              <area id="26" target="" alt="Pink see-through Fantasia" title="Pink see-through Fantasia" href="Fantasia.html" coords="25,5545,387,5568" shape="rect"/>
+              <area id="27" target="" alt="Binocular fish" title="Binocular fish" href="Bino.html" coords="660,5695,854,5727" shape="rect"/>
+              <area id="28" target="" alt="Black Swallower" title="Black Swallower" href="BlackSwallower.html" coords="23,5856,263,5877" shape="rect"/>
+              <area id="29" target="" alt="Cavier's Beacked Whale" title="Cavier's Beacked Whale" href="BeackedWhale.html" coords="719,6063,1046,6089" shape="rect"/>
+              <area id="30" target="" alt="Vampire Squid" title="Vampire Squid" href="Vampire.html" coords="31,6341,241,6373" shape="rect"/>
+              <area id="31" target="" alt="Dumbo Octopus" title="Dumbo Octopus" href="Dumbo.html" coords="662,6573,881,6597" shape="rect"/>
+              <area id="32" target="" alt="Deep-sea Dragonfish" title="Deep-sea Dragonfish" href="Dragonfish.html" coords="22,6676,320,6706" shape="rect"/>
+              <area id="33" target="" alt="Benthic Comb Jelly" title="Benthic Comb Jelly" href="CombJelly.html" coords="30,6996,289,7025" shape="rect"/>
+              <area id="34" target="" alt="Mariana Snailfish" title="Mariana Snailfish" href="Snailfish.html" coords="730,7107,981,7135" shape="rect"/>
+              <area id="35" target="" alt="Trieste" title="Trieste" href="Trieste.html" coords="40,7491,135,7518" shape="rect"/>
+              <area id="36" target="" alt="Hadal Zone" title="Hadal Zone" href="HadalZone.html" coords="727,6912,898,6940" shape="rect"/>
+          </map>
+          <script>
+            function scrollOne() {
+                window.scrollTo(300,0);
+            }
+          </script>
+          <script>
+            function scrollTwo() {
+                window.scrollTo(500,0);
+            }
+          </script>
+          <script>
+            function scrollThree() {
+                window.scrollTo(700,0);
+            }
+          </script>
+          <script>
+            function scrollFour() {
+                window.scrollTo(300,);
+            }
+          </script>
+          <script>
+            function scrollFive() {
+                window.scrollTo(300,);
+            }
+          </script>
+          <script>
+            function scrollSix() {
+                window.scrollTo(300,);
+            }
+          </script>
+          <script>
+            function scrollSeven() {
+                window.scrollTo(300,);
+            }
+          </script>
+          <script>
+            function scrollEight() {
+                window.scrollTo(300,);
+            }
+          </script>
+          <script>
+            function scrollNine() {
+                window.scrollTo(300,);
+            }
+          </script>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 style="position:absolute; left:1000px; top:650px" font-size="300%">Megamouth</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
-  </body>
 </html>
+
+
+
+<!--  <script>
+    jQuery.fn.extend({
+      oneFunction: function () {
+        window.scrollTo(500, 0);
+      }
+    });
+
+  </script>
+    <script>
+      $("#Meg").click(function(){
+        oneFunction();
+        });
+    </script> -->
+
+
+window.scrollTo(500, 0);
